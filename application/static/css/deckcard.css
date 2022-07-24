@@ -1,0 +1,140 @@
+.topBar{
+	display: flex;
+	justify-content: space-between;
+}
+
+.parent {
+	display: grid;
+	grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+	}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* .decks{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	background: #161616;
+	min-height: 100vh;
+} */
+
+/* section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+	
+}
+
+section::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+	
+} */
+
+/* .cardcontainer {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 40px 0;
+} */
+
+.cardcontainer .card {
+	position: relative;
+	width: 225px;
+	height: 325px;
+	background: rgba(255, 255, 255, 0.05);
+	margin: 20px;
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(10px);
+	background-color: lightblue;
+	border:1px solid black
+}
+
+.cardcontainer .card .content {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: 0.5s;
+}
+
+.cardcontainer .card:hover .content {
+	transform: translateY(-20px);
+}
+
+.cardcontainer .card .content .imgBx {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+}
+
+.cardcontainer .card .content .imgBx img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.cardcontainer .card .content .contentBx h3 {
+	/* color: #fff; */
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	margin: 20px 0 10px;
+	line-height: 1.1em;
+}
+
+.cardcontainer .card .content .contentBx h3 span {
+	font-size: 12px;
+	font-weight: 300;
+	text-transform: initial;
+}
+
+.cardcontainer .card .sci {
+	position: absolute;
+	bottom: 10px;
+	right: 1px;
+	display: flex;
+}
+
+.cardcontainer .card .sci li {
+	list-style: none;
+	margin: 0 5px;
+	transform: translateY(40px);
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.cardcontainer .card:hover .sci li {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.cardcontainer .card .sci li a {
+	color: #fff;
+	font-size: 14px;
+}

@@ -1,0 +1,26 @@
+.profile-pic {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profile-pic:hover .edit {
+    display: block;
+}
+
+.edit {
+    position: absolute;
+    right: -12%;
+    top: -20%;
+    cursor: pointer;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: none;
+}
+
+.dataTables_filter {
+    left: -169%;
+    position: relative;
+}

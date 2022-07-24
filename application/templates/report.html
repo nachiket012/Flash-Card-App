@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Dear, {{user.name}},</p>
+    <p>Here is your monthly report for using the Flashcard App v2</p>
+    <br>
+    <p>You created {{newdecks|length}} new decks this month</p>
+    <br>
+    {% if newdecks|length > 0 %}
+    <table>
+        <thead>
+            <th>Sr. No.</th>
+            <th>Name</th>
+            <th>Created At</th>
+        </thead>
+        <tbody>
+            {% for newdeck in newdecks %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{newdeck['deck_name']}}</td>
+                <td>{{newdeck['created']}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    {%endif%}
+    <br>
+    <p>Current Scores of your decks:</p>
+    <table>
+        <thead>
+            <th>Sr. No.</th>
+            <th>Name</th>
+            <th>Created On</th>
+            <th>Score</th>
+            <th>Last Reviewed</th>
+        </thead>
+        <tbody>
+            {% for deck in decks %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{deck['deck_name']}}</td>
+                <td>{{deck['created']}}</td>
+                <td>{{deck['score']}}</td>
+                <td>{{deck['last_rev']}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    <br>
+    <p>Continue to use the Flashcard App daily to boost your memory and knowledge!</p>
+    <br>
+    <p>Thank you for using my app this month. For any reviews or suggestions, please feel free to contact me.</p>
+    <p>Regards,</p>
+    <p>Nachiket</p>
+    <p>21f1006205@student.onlinedegree.iitm.ac.in</p>
+</body>
+
+</html>

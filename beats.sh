@@ -1,0 +1,1 @@
+celery -A application.celery beat -l info

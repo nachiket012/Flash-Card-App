@@ -1,0 +1,24 @@
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 98vw;
+    height: 80vh;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10%;
+}
+
+#loginForm form {
+    width: 30%;
+    align-self: center;
+    justify-content: center;
+}
+
+#topBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    
+}
